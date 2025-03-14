@@ -1,0 +1,136 @@
+.Right-container {
+  display: grid;
+  grid-template-columns: 15rem 15rem 15rem;
+  grid-template-rows: 10rem auto 10rem;
+  column-gap: 10px;
+  row-gap: 15px;
+}
+
+.parent-container {
+  display: flex;
+  margin-top: 3rem;
+  gap: 50px;
+}
+
+.App {
+  font-family: sans-serif;
+}
+
+.card1 {
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #063970;
+}
+
+.card1 > h3 {
+  color: aqua;
+}
+
+.card1 > p {
+  color: whitesmoke;
+}
+
+.hero-txt {
+  color: aqua;
+  font-size: 3rem;
+}
+
+.input-field {
+  margin-right: 1rem;
+  height: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  width: 15rem;
+}
+
+.btn {
+  margin-right: 2rem;
+  padding: 10px;
+  border-radius: 5px;
+  width: 8rem;
+  background-color: orange;
+  color: white;
+  font-size: large;
+  border-style: none;
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.success-message {
+  color: green;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  /* Mobile View */
+  .parent-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .Left-container,
+  .Right-container {
+    width: 100%;
+  }
+
+  .Right-container {
+    grid-template-columns: 1fr; /* Single column for cards */
+    row-gap: 10px;
+  }
+
+  .hero-txt {
+    font-size: 2rem;
+  }
+
+  .input-field {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .btn {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 720px) {
+  /* 720p */
+  .parent-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .Right-container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for cards */
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1080px) {
+  /* 1080p */
+  .Right-container {
+    grid-template-columns: repeat(3, 1fr); /* Three columns for cards */
+  }
+}
+
+@media (min-width: 1081px) and (max-width: 1440px) {
+  /* MacBook */
+  .parent-container {
+    gap: 40px;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 2732px) {
+  /* iPad Pro and larger screens */
+  .parent-container {
+    gap: 60px;
+  }
+}
